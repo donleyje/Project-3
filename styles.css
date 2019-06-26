@@ -46,10 +46,12 @@ h2 {
   margin-bottom: 7px;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro {
-  display: inline-block;
+  justify-content: center;
   text-align: center;
   margin: 0 20px 20px 20px;
   padding-bottom: 35px;
@@ -100,6 +102,7 @@ input[type="tel"]:focus,
 textarea:focus,
 select:focus {
   background-color: whitesmoke;
+  transition: all .3s ease;
 }
 
 input[type="checkbox"],
@@ -116,18 +119,18 @@ label.light {
   display: inline;
 }
 
-input[type="name"],
+input[id="name"],
 input[type="email"] {
   text-align: right;
 }
 
-input[type="name"]:focus,
+input[id=name]:focus,
 input[type="email"]:focus {
   text-align: left;
 }
 
 #zip {
-  width: 60%;
+  width: 50%;
 }
 
 [required] {
@@ -190,13 +193,19 @@ footer {
   }
 
   .intro {
-    max-width: 100%;
+    max-width: 50%
+    text-align: center;
+  }
+
+  #zip {
+    width: 25%;
   }
 
 header,
 footer {
   max-width: 100%;
 }
+
 
 textarea {
   padding-bottom: 20%;
@@ -205,6 +214,31 @@ textarea {
 
 button {
   padding: 20px 150px;
-
   }
+
+
+.field1 {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.field1 label {
+  display: inline-block !important;
+  width: 140px;
+  margin-right: 0;
+  text-align: right;
+
+
+}
+
+.field1 input {
+  display: inline-block !important;
+  width: 75%;
+  margin: 0 auto;
+  vertical-align: middle;
+
+}
+
 }
